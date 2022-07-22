@@ -1,8 +1,20 @@
-# Compiling <bits/stdc++.h>
+## Compiling <bits/stdc++.h>
 
-## On Mac
+### On Mac
 
-By default, MacOS uses Clang g++ compiler rather than GCC. To compile `<bits/stdc++.h>` using the Clang compiler:
+By default, MacOS uses Clang g++ compiler rather than GCC.
+
+#### Recommended: Install GCC
+
+```
+brew install gcc
+```
+
+By default the g++ compiler will be located at `/opt/homebrew/bin/g++-11`. Make sure to adjust the compiler in the build task and C/C++ configuration files if using VSCode.
+
+#### Not recommended: Download `stdc++.h` file
+
+To compile `<bits/stdc++.h>` using the Clang compiler:
 
 - Create a `bits` folder in `/usr/local/include`:
 
@@ -14,10 +26,4 @@ sudo mkdir -p /usr/local/include/bits
 
 ```
 sudo touch /usr/local/include/bits/stdc++.h
-```
-
-Otherwise install GCC:
-
-```
-brew install gcc
 ```
